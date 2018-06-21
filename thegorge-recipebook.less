@@ -1,0 +1,655 @@
+@font-face {
+    font-family: 'belisaplumilla';
+    src: url('https://s3.amazonaws.com/kleiforums/GORGE/belisaplumilla.woff2') format('woff2'), url('https://s3.amazonaws.com/kleiforums/GORGE/belisaplumilla.woff') format('woff'), url('https://s3.amazonaws.com/kleiforums/GORGE/belisaplumilla.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hammerhead';
+    src: url('https://s3.amazonaws.com/kleiforums/GORGE/hammerheadregular.woff2') format('woff2'), url('https://s3.amazonaws.com/kleiforums/GORGE/hammerheadregular.woff') format('woff'), url('https://s3.amazonaws.com/kleiforums/GORGE/hammerheadregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body *,
+body *:before,
+body *:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#thegorge {
+    font-size: 15px;
+}
+
+#thegorge * {
+    font-family: 'hammerhead', serif;
+    color: #573c1d;
+}
+
+.recipebook-header {
+    color: #573c1d;
+    text-align: center;
+    position: relative;
+    margin-bottom: -22px;
+    z-index: 2;
+    .recipebook-header-image {}
+    .recipebook-header-title {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 22px;
+        left: 0;
+    }
+    .recipebook-header-count {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: -6px;
+        left: 0;
+    }
+}
+
+#recipebook {
+    color: #573c1d;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    padding: 36px 66px;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-style: solid;
+        border-width: 113px 67px 50px 64px;
+        -moz-border-image: url(images/quagmire_recipe_menu_bg.png) 113 67 50 64 stretch;
+        -webkit-border-image: url(images/quagmire_recipe_menu_bg.png) 113 67 50 64 stretch;
+        -o-border-image: url(images/quagmire_recipe_menu_bg.png) 113 67 50 64 stretch;
+        border-image: url(images/quagmire_recipe_menu_bg.png) 113 67 50 64 fill stretch;
+        z-index: 0;
+    }
+    &>* {
+        z-index: 1;
+    }
+    .recipelist {
+        flex: 1;
+        text-align: center;
+        .recipelist-divider {
+            &.top {}
+            &.bottom {}
+        }
+        .recipelist-dishes {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow-y: scroll;
+            max-height: 660px;
+            &::-webkit-scrollbar {
+                width: 30px;
+                height: 15px;
+            }
+            &::-webkit-scrollbar-button {
+                width: 30px;
+                height: 50px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            &::-webkit-scrollbar-button:vertical:increment {
+                background-image: url(images/quagmire_recipe_scroll_arrow_down.png);
+            }
+            &::-webkit-scrollbar-button:vertical:decrement {
+                background-image: url(images/quagmire_recipe_scroll_arrow_up.png);
+            }
+            &::-webkit-scrollbar-button:horizontal:increment {
+                background-image: url(images/quagmire_recipe_scroll_arrow_right.png);
+            }
+            &::-webkit-scrollbar-button:horizontal:decrement {
+                background-image: url(images/quagmire_recipe_scroll_arrow_left.png);
+            }
+            &::-webkit-scrollbar-thumb {
+                border: 0px none #ffffff;
+                border-radius: 0px;
+                border-style: solid;
+            }
+            &::-webkit-scrollbar-thumb:vertical {
+                border-width: 25px 16px 25px 16px;
+                -moz-border-image: url(images/quagmire_recipe_scroll_handle.png) 25 16 25 16 stretch;
+                -webkit-border-image: url(images/quagmire_recipe_scroll_handle.png) 25 16 25 16 stretch;
+                -o-border-image: url(images/quagmire_recipe_scroll_handle.png) 25 16 25 16 stretch;
+                border-image: url(images/quagmire_recipe_scroll_handle.png) 25 16 25 16 fill stretch;
+            }
+            &::-webkit-scrollbar-thumb:horizontal {
+                border-width: 7px 9px;
+                -moz-border-image: url(images/quagmire_recipe_scroll_handle_horizontal.png) 7 9 stretch;
+                -webkit-border-image: url(images/quagmire_recipe_scroll_handle_horizontal.png) 7 9 stretch;
+                -o-border-image: url(images/quagmire_recipe_scroll_handle_horizontal.png) 7 9 stretch;
+                border-image: url(images/quagmire_recipe_scroll_handle_horizontal.png) 7 9 fill stretch;
+            }
+            &::-webkit-scrollbar-track {
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 0px;
+            }
+            &::-webkit-scrollbar-track:vertical {
+                background-size: 7px 100%;
+                background-image: url(images/quagmire_recipe_scroll_bar.png);
+            }
+            &::-webkit-scrollbar-track:horizontal {
+                background-size: 100% 7px;
+                background-image: url(images/quagmire_recipe_scroll_bar_horizontal.png);
+            }
+            &::-webkit-scrollbar-corner {
+                background: transparent;
+            }
+            br {
+                display: none;
+            }
+        }
+        .dish {
+            .transition(0.2s);
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            cursor: pointer;
+            &:before {
+                // This element will contain the shadow, behind everything else, so that the edges of the box aren't visible
+                content: " ";
+                position: absolute;
+                @padding: 5px;
+                top: @padding;
+                right: @padding;
+                bottom: @padding;
+                left: @padding;
+                box-shadow: 0px 0px 5px 0px #00000000;
+                z-index: -1;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                transform: scale(1.05);
+                &:before {
+                    box-shadow: 0px 0px 40px 0px #00000060;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .recipedetails {
+        width: 320px;
+        position: relative;
+        text-align: center;
+        border-style: solid;
+        border-width: 20px;
+        -moz-border-image: url(images/quagmire_recipe_menu_block.png) 20 repeat;
+        -webkit-border-image: url(images/quagmire_recipe_menu_block.png) 20 repeat;
+        -o-border-image: url(images/quagmire_recipe_menu_block.png) 20 repeat;
+        border-image: url(images/quagmire_recipe_menu_block.png) 20 fill repeat;
+        .dish-name {
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .dish-name-divider {
+            max-width: 74%;
+        }
+        .dish-header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            margin-top: 14px;
+            .dish {
+                transform: scale(1.4);
+                margin-top: 24px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .dish-value {
+                flex: 1;
+            }
+        }
+        .dish-stats {
+            display: block;
+        }
+        .dish-attribute {
+            margin-top: 12px;
+            margin-bottom: 16px;
+            label {
+                display: block;
+                font-size: 1.3em;
+            }
+            .dish-attribute-divider {
+                max-width: 90%;
+                margin-top: -5px;
+                margin-bottom: 5px;
+            }
+            .dish-attribute-content {
+                min-height: 20px;
+                &>.coin1,
+                &>.coin2,
+                &>.coin3,
+                &>.coin4 {
+                    margin: 0 3px;
+                }
+            }
+        }
+        .dish-finder {
+            margin-bottom: 50px;
+            .value>span {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
+        &.unknown {
+            .dish-attribute-content * {
+                opacity: 0;
+            }
+        }
+        .dish-recipe {
+            .rank-pos {
+                display: inline-block;
+                font-size: 1.5em;
+                vertical-align: bottom;
+                margin-right: 5px;
+                width: 36px;
+                text-align: right;
+                .ordinal {
+                    font-size: 0.8em;
+                    vertical-align: top;
+                }
+            }
+            .ingredient {
+                display: inline-block;
+                position: relative;
+                width: 24px;
+                height: 24px;
+                background-color: #d0a477;
+                margin: 2px;
+                vertical-align: bottom;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(images/ingredient_slot.png);
+                &:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                &.quagmire_foliage_cooked:before {
+                    background-image: url(images/ingredients/foliage.png);
+                }
+                &.quagmire_onion_cooked:before {
+                    background-image: url(images/ingredients/onion.png);
+                }
+                &.quagmire_carrot_cooked:before {
+                    background-image: url(images/ingredients/carrot.png);
+                }
+                &.quagmire_mushrooms_cooked:before {
+                    background-image: url(images/ingredients/mushrooms.png);
+                }
+                &.quagmire_crabmeat_cooked:before {
+                    background-image: url(images/ingredients/crabmeat.png);
+                }
+                &.quagmire_potato_cooked:before {
+                    background-image: url(images/ingredients/potato.png);
+                }
+                &.quagmire_salmon_cooked:before {
+                    background-image: url(images/ingredients/salmon.png);
+                }
+                &.quagmire_cookedsmallmeat:before {
+                    background-image: url(images/ingredients/smallmeat.png);
+                }
+                &.twigs:before {
+                    background-image: url(images/ingredients/twigs.png);
+                }
+                &.quagmire_turnip_cooked:before {
+                    background-image: url(images/ingredients/turnip.png);
+                }
+                &.quagmire_sap:before {
+                    background-image: url(images/ingredients/sap.png);
+                }
+                &.rocks:before {
+                    background-image: url(images/ingredients/rocks.png);
+                }
+                &.quagmire_goatmilk:before {
+                    background-image: url(images/ingredients/goatmilk.png);
+                }
+                &.quagmire_syrup:before {
+                    background-image: url(images/ingredients/syrup.png);
+                }
+                &.quagmire_flour:before {
+                    background-image: url(images/ingredients/flour.png);
+                }
+                &.quagmire_garlic_cooked:before {
+                    background-image: url(images/ingredients/garlic.png);
+                }
+                &.berries_cooked:before {
+                    background-image: url(images/ingredients/berries.png);
+                }
+                &.cookedmeat:before {
+                    background-image: url(images/ingredients/meat.png);
+                }
+                &.quagmire_tomato_cooked:before {
+                    background-image: url(images/ingredients/tomato.png);
+                }
+                &.quagmire_spotspice_ground:before {
+                    background-image: url(images/ingredients/spotspice_ground.png);
+                }
+            }
+        }
+        .recipedetails-flourish {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            &.left {
+                left: 0;
+            }
+            &.right {
+                right: 0;
+            }
+        }
+    }
+    .dish {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        background-image: url(images/recipe_known.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        &.selected {
+            background-image: url(images/recipe_known_selected.png);
+        }
+        &.discovered {
+            .dish-number {
+                color: #ffd559;
+            }
+        }
+        .dish-number {
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            letter-spacing: 2px;
+            font-family: 'belisaplumilla', serif;
+            color: #efefef;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            pointer-events: none;
+            .noselect;
+        }
+        .dish-icon,
+        .dish-plating {
+            position: absolute;
+            top: 8%;
+            right: 8%;
+            bottom: 8%;
+            left: 8%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .dish-icon {
+            background-image: url(images/recipe_unknown.png);
+        }
+        &.plate .dish-plating {
+            background-image: url(images/plate.png);
+        }
+        &.plate_silver .dish-plating {
+            background-image: url(images/plate_silver.png);
+        }
+        &.bowl .dish-plating {
+            background-image: url(images/bowl.png);
+        }
+        &.bowl_silver .dish-plating {
+            background-image: url(images/bowl_silver.png);
+        }
+        &.syrup .dish-plating {
+            background-image: none;
+        }
+        .icon-container {
+            position: absolute;
+            @padding: 8%;
+            top: @padding;
+            right: @padding;
+            bottom: @padding;
+            left: @padding;
+        }
+        .tribute-icon {
+            position: absolute;
+            width: 25%;
+            height: 25%;
+            left: 0;
+            bottom: 0;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            &.coin1 {
+                background-image: url(images/quagmire_coin1.png);
+            }
+            &.coin2 {
+                background-image: url(images/quagmire_coin2.png);
+            }
+            &.coin3 {
+                background-image: url(images/quagmire_coin3.png);
+            }
+            &.coin4 {
+                background-image: url(images/quagmire_coin4.png);
+            }
+        }
+        .plating-tribute-icon {
+            position: absolute;
+            width: 25%;
+            height: 25%;
+            left: 25%;
+            bottom: 0;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            &.coin1 {
+                background-image: url(images/quagmire_coin1.png);
+            }
+            &.coin2 {
+                background-image: url(images/quagmire_coin2.png);
+            }
+            &.coin3 {
+                background-image: url(images/quagmire_coin3.png);
+            }
+            &.coin4 {
+                background-image: url(images/quagmire_coin4.png);
+            }
+        }
+        .cooking-station-icon {
+            position: absolute;
+            width: 50%;
+            height: 25%;
+            left: 50%;
+            bottom: 0;
+            text-align: right;
+            &>* {
+                display: inline-block;
+                width: 50%;
+                height: 100%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        &.large-dish {
+            .pot {
+                background-image: url(images/pot.png);
+            }
+            .oven {
+                background-image: url(images/casseroledish.png);
+            }
+            .grill {
+                background-image: url(images/grill.png);
+            }
+        }
+        &.small-dish {
+            .pot {
+                background-image: url(images/pot_small.png);
+            }
+            .oven {
+                background-image: url(images/casseroledish_small.png);
+            }
+            .grill {
+                background-image: url(images/grill_small.png);
+            }
+        }
+        &.syrup .pot {
+            background-image: url(images/pot_syrup.png);
+        }
+    }
+    .coin1,
+    .coin2,
+    .coin3,
+    .coin4 {
+        display: none;
+        &.visible {
+            display: inline-block;
+        }
+        & .value {
+            font-size: 1.3em;
+            vertical-align: middle;
+        }
+    }
+    .coin1 .icon,
+    .coin2 .icon,
+    .coin3 .icon,
+    .coin4 .icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 22px;
+        height: 22px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .coin1 .icon {
+        background-image: url(images/quagmire_coin1.png);
+    }
+    .coin2 .icon {
+        background-image: url(images/quagmire_coin2.png);
+    }
+    .coin3 .icon {
+        background-image: url(images/quagmire_coin3.png);
+    }
+    .coin4 .icon {
+        background-image: url(images/quagmire_coin4.png);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #recipebook .recipedetails .dish-header {
+        display: block;
+        .dish {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+        .dish-value {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .recipebook-header .recipebook-header-title {
+        font-size: 1.3em;
+        bottom: 28px;
+    }
+    .recipebook-header .recipebook-header-count {
+        font-size: 1em;
+        bottom: 6px;
+    }
+    #recipebook {
+        flex-direction: column;
+        padding: 20px 34px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-style: solid;
+            border-width: 110px 70px 60px;
+            -moz-border-image: url(images/quagmire_recipe_menu_bg_narrow.png) 110 70 60 stretch;
+            -webkit-border-image: url(images/quagmire_recipe_menu_bg_narrow.png) 110 70 60 stretch;
+            -o-border-image: url(images/quagmire_recipe_menu_bg_narrow.png) 110 70 60 stretch;
+            border-image: url(images/quagmire_recipe_menu_bg_narrow.png) 110 70 60 fill stretch;
+            z-index: 0;
+        }
+        .recipelist .recipelist-dishes {
+            max-height: 21s0px;
+            overflow-y: auto;
+            list-style-type: none;
+            white-space: nowrap;
+            overflow-x: scroll;
+            br {
+                display: inherit;
+            }
+        }
+        .recipelist .recipelist-divider {
+            &.top {
+                margin-bottom: 10px;
+            }
+            &.bottom {
+                display: none;
+            }
+        }
+        .recipedetails {
+            width: 100%;
+            .dish-name {
+                margin-top: 5px;
+            }
+            .dish-header .dish-img-container {
+                width: 80px;
+                .dish-img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            .dish-tribute {
+                margin-top: 0;
+            }
+            .dish-attribute {
+                .dish-attribute-divider {
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+}
+
+.noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.transition(@time: 0.4s;
+@elem: all) {
+    -webkit-transition: @elem @time ease;
+    -moz-transition: @elem @time ease;
+    transition: @elem @time ease;
+}
