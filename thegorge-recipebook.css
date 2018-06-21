@@ -622,6 +622,19 @@ img {
     margin-top: -2px;
   }
 }
+#thegorge .recipebook-credits {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff6e8;
+}
+#thegorge .recipebook-credits a {
+  color: #d77300;
+  text-decoration: none;
+}
+#thegorge .recipebook-credits a:hover {
+  color: #e65217;
+}
 .cat_btn,
 .station_btn {
   outline: none;

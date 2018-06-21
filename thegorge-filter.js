@@ -5,6 +5,9 @@ function GorgeFilterDishes() {
         dishDisplayModeDefault: "dish-display-mode-opacity"
     };
     main(options);
+    
+    // Add credits! Thank you both!
+    $("#recipebook").after('<div class="recipebook-credits">Craving and Cooking Station filtering done by <a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a> and <a href="https://forums.kleientertainment.com/profile/988803-adai1198/">adai1198</a>!<br>Traditional Chinese by <a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a>. Want to add your own language? Submit a request on <a href="https://github.com/kleientertainment/TheGorgeRecipeBook">git</a>.</div>');
 }
 
 // this is the code which will be injected into a given page...
