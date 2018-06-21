@@ -622,3 +622,54 @@ img {
     margin-top: -2px;
   }
 }
+.cat_btn,
+.station_btn {
+  outline: none;
+  cursor: pointer;
+  background-color: #3B2915;
+  color: white;
+}
+.invisible {
+  display: none !important;
+}
+.translucent {
+  opacity: 0.2 !important;
+}
+.button {
+  display: inline-block;
+  line-height: normal;
+  cursor: pointer;
+  background-color: #C29970;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  margin: 3px;
+  user-select: none;
+}
+.button:hover {
+  border-color: #000;
+  background-color: #911;
+  color: #fff;
+}
+input:checked + .button {
+  border-color: #000 !important;
+  background-color: #3B2915 !important;
+  color: white !important;
+}
+input:not(:checked) + .button {
+  border-color: #000 !important;
+  background-color: #C29970 !important;
+  color: #573c1d !important;
+}
+.language_btn:hover {
+  background-color: #af8860;
+}
+.language_btn.selected {
+  background-color: #3B2915 !important;
+  color: white !important;
+}
+#recipebook .recipelist .dish:hover.lowpoint,
+#recipebook .recipelist .dish:active.lowpoint,
+#recipebook .recipelist .dish:focus.lowpoint {
+  transform: initial;
+}

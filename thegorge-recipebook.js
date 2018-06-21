@@ -149,6 +149,9 @@ function FillList() {
     }
 
     $(".recipebook-header-count").text("Discovered Recipes: " + discovered_count + "/" + recipe_count);
+
+    if (typeof GorgeFilterDishes == 'function') GorgeFilterDishes();
+    if (typeof GorgeRecipebookLocalize == 'function') GorgeRecipebookLocalize();
 }
 
 function DishNumber(number) {
