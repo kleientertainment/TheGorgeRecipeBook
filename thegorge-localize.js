@@ -75,8 +75,11 @@ function GorgeRecipebookLocalize() {
     $('.recipelist').append(btn_language_div);
 
     // Look for a cookie
-    var language = loc_get_cookie();
+    var language = loc_get_cookie("language");
     if (language != null && loc_strings[language] != null) loc_set_language(language);
+
+    // Select the corresponding button
+    $(".language_btn[for='" + loc_selected_language + "']").addClass("selected");
 
     // Setup button listener
     $('.language_btn').on('click', e => {
@@ -116,8 +119,19 @@ function loc_set_cookie(cname, cvalue, exdays) {
 }
 
 function loc_get_cookie(cname) {
-    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    if (match) return match[2];
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 function loc_string(key) {
