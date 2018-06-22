@@ -366,7 +366,7 @@ var loc_strings = {
         "grill": "Гриль",
 
         "all": "Все",
-        "snack": "Закуса",
+        "snack": "Закуска",
         "bread": "Хлеб",
         "veggie": "Овощи",
         "soup": "Суп",
