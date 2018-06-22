@@ -104,36 +104,40 @@ function FillList() {
         $(dish_icon_container).addClass("icon-container");
         $(dish_icon_container).appendTo($(dish));
 
+        var tribute_icon = "";
         var tribute_icon_class = "";
         var tribute_icon_title = "";
         if (discovered_dishes[i] != null) {
             for (var coin_index = 3; coin_index >= 0; coin_index--) {
                 if (discovered_dishes[i].coins[coin_index] > 0) {
+                    tribute_icon = "coin" + (coin_index + 1);
                     tribute_icon_class = "coin" + (coin_index + 1) + " visible";
                     tribute_icon_title = coin_names[coin_index];
                     break;
                 }
             }
         }
-        $(dish_icon_container).append("<span class='tribute-icon " + tribute_icon_class + "' title='" + tribute_icon_title + "'></span>");
+        $(dish_icon_container).append("<span class='tribute-icon " + tribute_icon_class + "' title='" + tribute_icon_title + "' i18n-title='" + tribute_icon + "'></span>");
 
+        var plating_icon = "";
         var plating_icon_class = "";
         var plating_icon_title = "";
         if (discovered_dishes[i] != null) {
             for (var coin_index = 3; coin_index >= 0; coin_index--) {
                 if (discovered_dishes[i].silver_coins[coin_index] > 0) {
+                    plating_icon = "coin" + (coin_index + 1);
                     plating_icon_class = "coin" + (coin_index + 1) + " visible";
                     plating_icon_title = coin_names[coin_index];
                     break;
                 }
             }
         }
-        $(dish_icon_container).append("<span class='plating-tribute-icon " + plating_icon_class + "' title='" + plating_icon_title + "'></span>");
+        $(dish_icon_container).append("<span class='plating-tribute-icon " + plating_icon_class + "' title='" + plating_icon_title + "' i18n-title='" + plating_icon + "'></span>");
 
         var stations_html = "";
         if (discovered_dishes[i] != null) {
             for (var station_index = 0; station_index < discovered_dishes[i].station.length; station_index++) {
-                stations_html += "<span class='" + discovered_dishes[i].station[station_index] + "' title='" + cooking_station_names[discovered_dishes[i].station[station_index]] + "'></span>";
+                stations_html += "<span class='" + discovered_dishes[i].station[station_index] + "' title='" + cooking_station_names[discovered_dishes[i].station[station_index]] + "' i18n-title='" + discovered_dishes[i].station[station_index] + "'></span>";
             }
         }
         $(dish_icon_container).append("<span class='cooking-station-icon'>" + stations_html + "</span>");
@@ -225,7 +229,10 @@ function SelectDish(dish_elem) {
                 $(".recipedetails .dish-tribute .coin" + (coin_index + 1) + " .value").text(discovered_dishes[index].coins[coin_index]);
                 if (first) {
                     $(".recipedetails .dish .tribute-icon").addClass("coin" + (coin_index + 1) + " visible");
-                    $(".recipedetails .dish .tribute-icon").attr("title", coin_names[coin_index]);
+                    let title = coin_names[coin_index];
+                    if (typeof loc_string == 'function') title = loc_string("coin" + (coin_index + 1));
+                    $(".recipedetails .dish .tribute-icon").attr("title", title);
+                    $(".recipedetails .dish .tribute-icon").attr("i18n-title", "coin" + (coin_index + 1));
                     first = false;
                 }
                 empty = false;
@@ -250,7 +257,10 @@ function SelectDish(dish_elem) {
                 $(".recipedetails .dish-plate .coin" + (coin_index + 1) + " .value").text(discovered_dishes[index].silver_coins[coin_index]);
                 if (first) {
                     $(".recipedetails .dish .plating-tribute-icon").addClass("coin" + (coin_index + 1) + " visible");
-                    $(".recipedetails .dish .plating-tribute-icon").attr("title", coin_names[coin_index]);
+                    let title = coin_names[coin_index];
+                    if (typeof loc_string == 'function') title = loc_string("coin" + (coin_index + 1));
+                    $(".recipedetails .dish .plating-tribute-icon").attr("title", title);
+                    $(".recipedetails .dish .plating-tribute-icon").attr("i18n-title", "coin" + (coin_index + 1));
                     first = false;
                 }
                 empty = false;
@@ -269,7 +279,7 @@ function SelectDish(dish_elem) {
         var cravings_text = "";
         if (discovered_dishes[index].cravings) {
             for (var craving_index = 0; craving_index < discovered_dishes[index].cravings.length; craving_index++) {
-                cravings_text += craving_names[discovered_dishes[index].cravings[craving_index]] + ", ";
+                cravings_text += "<span i18n-text='" + discovered_dishes[index].cravings[craving_index] + "'>" + craving_names[discovered_dishes[index].cravings[craving_index]] + "</span>, ";
             }
         }
         if (cravings_text.length == 0) {
@@ -277,7 +287,7 @@ function SelectDish(dish_elem) {
         } else {
             cravings_text = cravings_text.substring(0, cravings_text.length - 2);
         }
-        $(".recipedetails .dish-craving .value").text(cravings_text);
+        $(".recipedetails .dish-craving .value").html(cravings_text);
 
         // Check its cooking stations
         var stations_text = "";
@@ -298,7 +308,9 @@ function SelectDish(dish_elem) {
             recipe_html += "<span class='rank-pos' title='This is the " + recipe_pos + "most popular way to cook this dish.'>" + OrdinalNumber(recipe_index + 1) + "</span>";
             // Go through the ingredients
             for (var ingredient_index = 0; ingredient_index < recipe.length; ingredient_index++) {
-                recipe_html += "<span class='ingredient " + recipe[ingredient_index] + "' title='" + ingredient_names[recipe[ingredient_index]] + "'></span>";
+                let name = ingredient_names[recipe[ingredient_index]];
+                if (typeof loc_string == 'function') name = loc_string(recipe[ingredient_index]);
+                recipe_html += "<span class='ingredient " + recipe[ingredient_index] + "' title='" + name + "' i18n-title='" + recipe[ingredient_index] + "'></span>";
             }
             recipe_html += "</div>";
             $(".recipedetails .dish-recipes .dish-attribute-content").append(recipe_html);
@@ -309,13 +321,22 @@ function SelectDish(dish_elem) {
             for (var finder_index = 0; finder_index < discovered_dishes[index].finder.length; finder_index++) {
                 var finder_username = discovered_dishes[index].finder[finder_index];
                 if (finder_username.length > 1) {
-                    $(".recipedetails .dish-finder .value").append("<span class='unknown-user' title='This recipe was originally discovered by " + finder_username + "'>" + finder_username + "</span>");
+                    let title = "This recipe was originally discovered by %1";
+                    if (typeof loc_string == 'function') title = loc_string('label_cook_info');
+                    title = title.replace("%1", finder_username);
+                    $(".recipedetails .dish-finder .value").append("<span title='" + title + "' i18n-title='label_cook_info' i18n-argument='" + finder_username + "'>" + finder_username + "</span>");
                 } else {
                     $(".recipedetails .dish-finder .value").append("<span title='This recipe was originally discovered by a nameless someone.'>Someone</span>");
                 }
             }
         } else {
-            $(".recipedetails .dish-finder .value").append("<span title='This recipe was originally discovered by a nameless someone.'>Someone</span>");
+            let title = "This recipe was originally discovered by a nameless someone.";
+            let name = "Someone";
+            if (typeof loc_string == 'function') {
+                title = loc_string('label_cook_info_unknown');
+                name = loc_string('label_cook_unknown');
+            };
+            $(".recipedetails .dish-finder .value").append("<span title='" + title + "' i18n-title='label_cook_info_unknown' i18n-text='label_cook_unknown'>" + name + "</span>");
         }
 
         var dish_size_class = (discovered_dishes[index].ingredients[0].length == 4) ? "large-dish" : "small-dish";

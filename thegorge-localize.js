@@ -7,7 +7,7 @@ var loc_strings = {
         "label_recipes": "Top Recipes",
         "label_cook": "First Cooked By",
         "label_cook_unknown": "Someone",
-        "label_cook_info": "This recipe was originally discovered by ",
+        "label_cook_info": "This recipe was originally discovered by %1",
         "label_cook_info_unknown": "This recipe was originally discovered by a nameless someone.",
 
         "pot": "Cookpot",
@@ -358,7 +358,7 @@ var loc_strings = {
         "label_recipes": "Лучшие рецепты",
         "label_cook": "Впервые приготовлено",
         "label_cook_unknown": "Кто-то",
-        "label_cook_info": "Этот рецепт был первоначально обнаружен",
+        "label_cook_info": "Этот рецепт был первоначально обнаружен %1",
         "label_cook_info_unknown": "Этот рецепт был первоначально обнаружен безымянным человеком.",
 
         "pot": "Казан",
@@ -484,7 +484,7 @@ var loc_strings = {
         "label_recipes": "Melhores Receitas",
         "label_cook": "Cozinhado a primeira vez por",
         "label_cook_unknown": "Alguém",
-        "label_cook_info": "Essa receita foi descoberta originalmente por ",
+        "label_cook_info": "Essa receita foi descoberta originalmente por %1",
         "label_cook_info_unknown": "Essa receita foi descoberta originalmente por alguém sem nome.",
 
         "pot": "Panela",
@@ -595,7 +595,7 @@ function loc_set_language(language_key) {
         $('.contribute').html(loc_string("__CONTRIBUTE__")
             .replace('git', '<a href="https://github.com/kleientertainment/TheGorgeRecipeBook">git</a>') + "<br>");
 
-    // Update cravings
+    // Update craving buttons
     var craving_elems = $('.btn_cat_div label.button');
     for (var i = 0; i < craving_elems.length; i++) {
         $(craving_elems[i]).text(loc_string($(craving_elems[i]).attr('for')));
@@ -615,7 +615,7 @@ function loc_set_language(language_key) {
 
     // Update dishname
     for (let i = 1; i < 71; ++i) {
-        discovered_dishes[i].name = loc_string("dish" + i);
+        //discovered_dishes[i].name = loc_string("dish" + i);
     }
 
     // Update Info
@@ -630,7 +630,27 @@ function loc_set_language(language_key) {
     $('.recipelist-dishes > li').each((_, e) => {
         let index = Number.parseInt($(e).data('index'));
         $(e).attr('title', discovered_dishes[index].name);
-    })
+    });
+
+    // Update translatable text elements
+    var elements = $("[i18n-text]");
+    for (let i = 0; i < elements.length; i++) {
+        let key = $(elements[i]).attr("i18n-text");
+        $(elements[i]).text(loc_string(key));
+    }
+
+    // Update translatable title elements
+    var elements = $("[i18n-title]");
+    for (let i = 0; i < elements.length; i++) {
+        let key = $(elements[i]).attr("i18n-title");
+        let arg = $(elements[i]).attr("i18n-argument");
+        let title = loc_string(key);
+        if (arg) {
+            title = title.replace('%1', arg);
+        }
+        $(elements[i]).attr("title", title);
+    }
+
 
     // Set a cookie
     loc_set_cookie("language", loc_selected_language, 6);
