@@ -5,7 +5,7 @@ function GorgeFilterDishes() {
         dishDisplayModeDefault: "dish-display-mode-opacity"
     };
     main(options);
-    
+
     // Add credits! Thank you both!
     $("#recipebook").after('<div class="recipebook-credits">Craving and Cooking Station filtering done by <a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a> and <a href="https://forums.kleientertainment.com/profile/988803-adai1198/">adai1198</a>!<br>Traditional Chinese by <a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a>. Want to add your own language? Submit a request on <a href="https://github.com/kleientertainment/TheGorgeRecipeBook">git</a>.</div>');
 }
@@ -140,25 +140,22 @@ function main(options) {
     // default
     dishElement[lastClickDish].childNodes[0].click();
 
-    let dishes = document.querySelectorAll('.recipelist-dishes > *');
-
     function highlight() {
-        for (let id = 1; id < 71; ++id) {
-            let dish = dishes[id - 1]; // domElement array is zero start
-            //
+        for (let id = 1; id <= 70; ++id) {
+            let dish = $(".recipelist-dishes .dish[data-index=" + id + "]");
+            
             let currentStationAll = !currentStationStatus.pot &&
                 !currentStationStatus.oven && !currentStationStatus.grill;
+
             // normal dish
-            let needHighlight = ((discovered_dishes[id].cravings != null &&
-                        (currentCategory == 'all' ||
-                            discovered_dishes[id].cravings.indexOf(currentCategory) != -1))
+            let needHighlight = (
+                    (discovered_dishes[id].cravings != null && (currentCategory == 'all' || discovered_dishes[id].cravings.indexOf(currentCategory) != -1))
                     // this is not a bug because all dishes has only one station
                     &&
                     (currentStationAll || currentStationStatus[discovered_dishes[id].station[0]]))
                 // dish 70
                 ||
-                (discovered_dishes[id].cravings == null &&
-                    currentStationAll && currentCategory == 'all');
+                (discovered_dishes[id].cravings == null && currentStationAll && currentCategory == 'all');
 
             if (dishDisplayModeDefault) {
                 if (needHighlight)
