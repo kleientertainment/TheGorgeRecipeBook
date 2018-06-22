@@ -91,7 +91,10 @@ function FillList() {
         if (discovered_dishes[i] != null) {
             $(dish).addClass("discovered");
             discovered_count++;
-            $(dish).attr("title", discovered_dishes[i].name);
+            let name = discovered_dishes[i].name;
+            if (typeof loc_string == 'function') name = loc_string("dish" + i);
+            $(dish).attr("title", name);
+            $(dish).attr("i18n-title", "dish" + i);
             $(dish).addClass(discovered_dishes[i].dish);
             if (i == 70) $(dish).addClass("syrup");
             $(dish).append("<span class='dish-icon' style='background-image: url(" + discovered_dishes[i].image + ");'></span>");
@@ -217,7 +220,9 @@ function SelectDish(dish_elem) {
     if (dish_data) {
         // This dish has been discovered!
         $(".recipedetails").removeClass("unknown");
-        $(".recipedetails .dish-name").text(dish_data.name);
+        let name = dish_data.name;
+        if (typeof loc_string == 'function') name = loc_string("dish" + index);
+        $(".recipedetails .dish-name").text(name);
 
         // Check its tribute value
         $(".recipedetails .dish .tribute-icon").attr("class", "tribute-icon");

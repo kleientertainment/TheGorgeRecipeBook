@@ -613,11 +613,6 @@ function loc_set_language(language_key) {
         cooking_station_names[key] = loc_string(key);
     }
 
-    // Update dishname
-    for (let i = 1; i < 71; ++i) {
-        //discovered_dishes[i].name = loc_string("dish" + i);
-    }
-
     // Update Info
     $('.dish-tribute > label:first').text(loc_string('label_offering'));
     $('.dish-plate > label:first').text(loc_string('label_silveroffering'));
