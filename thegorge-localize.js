@@ -1,15 +1,15 @@
 var loc_strings = {
     "English": {
-        "label_offering":"Offering",
-        "label_silveroffering":"Silver Dish Offering",
-        "label_craving":"Satisfies Craving",
-        "label_stations":"Cooking Stations",
-        "label_recipes":"Top Recipes",
-        "label_cook":"First Cooked By",
-        "label_cook_unknown":"Someone",
-        "label_cook_info":"This recipe was originally discovered by ",
-        "label_cook_info_unknown":"This recipe was originally discovered by a nameless someone.",
-        
+        "label_offering": "Offering",
+        "label_silveroffering": "Silver Dish Offering",
+        "label_craving": "Satisfies Craving",
+        "label_stations": "Cooking Stations",
+        "label_recipes": "Top Recipes",
+        "label_cook": "First Cooked By",
+        "label_cook_unknown": "Someone",
+        "label_cook_info": "This recipe was originally discovered by ",
+        "label_cook_info_unknown": "This recipe was originally discovered by a nameless someone.",
+
         "pot": "Cookpot",
         "oven": "Oven",
         "grill": "Grill",
@@ -122,10 +122,24 @@ var loc_strings = {
         "dish69": "cheesecake",
         "dish70": "quagmire_syrup"
     },
-    "繁": {
+    "繁體中文": {
+        "__FILTER_CREDIT__": "需求和烹調器具篩選器由 %1 和 %2 製作！",
+        "__TRANSLATION_AUTHOR__": "cheewind(https://forums.kleientertainment.com/profile/1125024-cheewind/)",
+        "__TRANSLATION_CREDIT__": "%1翻譯由 %2 提供",
+        "__CONTRIBUTE__": "想要增加你使用的語言? 在 git 上提交",
+
+        "label_offering": "獻祭",
+        "label_silveroffering": "銀器獻祭",
+        "label_craving": "滿足需求",
+        "label_stations": "烹調器具",
+        "label_recipes": "常用食譜",
+        "label_cook": "研製者",
+        "label_cook_unknown": "某人",
+
         "pot": "烹煮鍋(Cookpot)",
         "oven": "窯烤爐(Oven)",
         "grill": "燒烤盤(Grill)",
+
         "all": "全部(All)",
         "snack": "點心(Snack)",
         "bread": "麵包(Bread)",
@@ -135,34 +149,192 @@ var loc_strings = {
         "meat": "肉(Meat)",
         "cheese": "起司(Cheese)",
         "pasta": "義大利麵(Pasta)",
-        "sweet": "甜品(Dessert)"
+        "sweet": "甜品(Dessert)",
+        "none": "無",
+
+        "dish1": "麵包",
+        "dish2": "薯片",
+        "dish3": "蔬菜湯",
+        "dish4": "果醬三明治",
+        "dish5": "燉魚",
+        "dish6": "櫻桃蘿蔔蛋糕",
+        "dish7": "馬鈴薯煎餅",
+        "dish8": "馬鈴薯湯",
+        "dish9": "魚丸串",
+        "dish10": "肉丸",
+        "dish11": "肉串",
+        "dish12": "石頭湯",
+        "dish13": "炸肉餅",
+        "dish14": "烤蔬菜",
+        "dish15": "肉餅",
+        "dish16": "胡蘿蔔湯",
+        "dish17": "魚派",
+        "dish18": "炸魚薯條",
+        "dish19": "肉派",
+        "dish20": "迷你漢堡",
+        "dish21": "果醬",
+        "dish22": "瑞士卷",
+        "dish23": "蘿蔔蛋糕",
+        "dish24": "馬鈴薯泥",
+        "dish25": "大蒜麵包",
+        "dish26": "番茄湯",
+        "dish27": "香腸",
+        "dish28": "蜜糖魚",
+        "dish29": "釀蘑菇",
+        "dish30": "普羅旺斯雜燴",
+        "dish31": "普切塔",
+        "dish32": "燉肉",
+        "dish33": "漢堡",
+        "dish34": "魚堡",
+        "dish35": "蘑菇堡",
+        "dish36": "魚排",
+        "dish37": "咖哩",
+        "dish38": "肉丸義大利麵",
+        "dish39": "千層麵",
+        "dish40": "嫩煎魚",
+        "dish41": "牧羊人派",
+        "dish42": "糖果",
+        "dish43": "布丁",
+        "dish44": "鬆餅",
+        "dish45": "莓果塔",
+        "dish46": "起司通心麵",
+        "dish47": "貝果魚",
+        "dish48": "起司三明治",
+        "dish49": "奶油蘑菇湯",
+        "dish50": "波蘭餃子",
+        "dish51": "焗烤義大利通心麵",
+        "dish52": "起司漢堡",
+        "dish53": "義大利寬板麵",
+        "dish54": "洋蔥湯",
+        "dish55": "炸肉排",
+        "dish56": "奶油魚",
+        "dish57": "披薩",
+        "dish58": "紅燒牛肉",
+        "dish59": "蟹肉餅",
+        "dish60": "牛排薯條",
+        "dish61": "射手三明治",
+        "dish62": "培根裹肉",
+        "dish63": "蟹捲",
+        "dish64": "威靈頓牛排",
+        "dish65": "義大利蟹餃",
+        "dish66": "焦糖方塊",
+        "dish67": "司康",
+        "dish68": "乳脂鬆糕",
+        "dish69": "起司蛋糕",
+        "dish70": "沼地糖漿"
     },
-    "简": {
-        "pot": "烹煮鍋(Cookpot)",
+    "简体中文": {
+        "__FILTER_CREDIT__": "需求和烹调器具筛选器由 %1 和 %2 制作！",
+        "__TRANSLATION_AUTHOR__": "cheewind(https://forums.kleientertainment.com/profile/1125024-cheewind/)",
+        "__TRANSLATION_CREDIT__": "%1翻译由 %2 提供",
+        "__CONTRIBUTE__": "想要增加你使用的语言? 在 git 上提交",
+
+        "label_offering": "献祭",
+        "label_silveroffering": "银器献祭",
+        "label_craving": "满足需求",
+        "label_stations": "烹调器具",
+        "label_recipes": "常用食谱",
+        "label_cook": "研制者",
+        "label_cook_unknown": "某人",
+
+        "pot": "烹煮锅(Cookpot)",
         "oven": "窑烤炉(Oven)",
         "grill": "烧烤盘(Grill)",
+
         "all": "全部(All)",
         "snack": "点心(Snack)",
         "bread": "面包(Bread)",
         "veggie": "蔬菜(Veggie)",
         "soup": "汤(Soup)",
-        "fish": "魚(Fish)",
+        "fish": "鱼(Fish)",
         "meat": "肉(Meat)",
         "cheese": "起司(Cheese)",
-        "pasta": "意大利面(Pasta)",
-        "sweet": "甜品(Dessert)"
+        "pasta": "义大利面(Pasta)",
+        "sweet": "甜品(Dessert)",
+        "none": "无",
+
+        "dish1": "面包",
+        "dish2": "薯片",
+        "dish3": "蔬菜汤",
+        "dish4": "果酱三明治",
+        "dish5": "炖鱼",
+        "dish6": "樱桃萝卜蛋糕",
+        "dish7": "马铃薯煎饼",
+        "dish8": "马铃薯汤",
+        "dish9": "鱼丸串",
+        "dish10": "肉丸",
+        "dish11": "肉串",
+        "dish12": "石头汤",
+        "dish13": "炸肉饼",
+        "dish14": "烤蔬菜",
+        "dish15": "肉饼",
+        "dish16": "胡萝卜汤",
+        "dish17": "鱼派",
+        "dish18": "炸鱼薯条",
+        "dish19": "肉派",
+        "dish20": "迷你汉堡",
+        "dish21": "果酱",
+        "dish22": "瑞士捲",
+        "dish23": "萝卜蛋糕",
+        "dish24": "马铃薯泥",
+        "dish25": "大蒜面包",
+        "dish26": "番茄汤",
+        "dish27": "香肠",
+        "dish28": "蜜糖鱼",
+        "dish29": "酿蘑菇",
+        "dish30": "普罗旺斯杂烩",
+        "dish31": "普切塔",
+        "dish32": "炖肉",
+        "dish33": "汉堡",
+        "dish34": "鱼堡",
+        "dish35": "蘑菇堡",
+        "dish36": "鱼排",
+        "dish37": "咖哩",
+        "dish38": "肉丸义大利面",
+        "dish39": "千层面",
+        "dish40": "嫩煎鱼",
+        "dish41": "牧羊人派",
+        "dish42": "糖果",
+        "dish43": "布丁",
+        "dish44": "松饼",
+        "dish45": "莓果塔",
+        "dish46": "起司通心面",
+        "dish47": "贝果鱼",
+        "dish48": "起司三明治",
+        "dish49": "奶油蘑菇汤",
+        "dish50": "波兰饺子",
+        "dish51": "焗烤义大利通心面",
+        "dish52": "起司汉堡",
+        "dish53": "义大利宽板面",
+        "dish54": "洋葱汤",
+        "dish55": "炸肉排",
+        "dish56": "奶油鱼",
+        "dish57": "披萨",
+        "dish58": "红烧牛肉",
+        "dish59": "蟹肉饼",
+        "dish60": "牛排薯条",
+        "dish61": "射手三明治",
+        "dish62": "培根裹肉",
+        "dish63": "蟹捲",
+        "dish64": "威灵顿牛排",
+        "dish65": "义大利蟹饺",
+        "dish66": "焦糖方块",
+        "dish67": "司康",
+        "dish68": "乳脂松糕",
+        "dish69": "起司蛋糕",
+        "dish70": "沼地糖浆"
     },
     "Русский": {
-        "label_offering":"Подношение",
-        "label_silveroffering":"Подношение<br>в серебре",
-        "label_craving":"Удовлетворяет желание",
-        "label_stations":"Кухонная станция",
-        "label_recipes":"Лучшие рецепты",
-        "label_cook":"Впервые приготовлено",
-        "label_cook_unknown":"Кто-то",
-        "label_cook_info":"Этот рецепт был первоначально обнаружен",
-        "label_cook_info_unknown":"Этот рецепт был первоначально обнаружен безымянным человеком.",
-        
+        "label_offering": "Подношение",
+        "label_silveroffering": "Подношение<br>в серебре",
+        "label_craving": "Удовлетворяет желание",
+        "label_stations": "Кухонная станция",
+        "label_recipes": "Лучшие рецепты",
+        "label_cook": "Впервые приготовлено",
+        "label_cook_unknown": "Кто-то",
+        "label_cook_info": "Этот рецепт был первоначально обнаружен",
+        "label_cook_info_unknown": "Этот рецепт был первоначально обнаружен безымянным человеком.",
+
         "pot": "Казан",
         "oven": "Печь",
         "grill": "Гриль",
@@ -274,6 +446,61 @@ var loc_strings = {
         "dish68": "трайфл",
         "dish69": "чизкейк",
         "dish70": "квагмайерский_сироп"
+    },
+    "Português (Br)": {
+        "__TRANSLATION_AUTHOR__": "Kynoox_(https://forums.kleientertainment.com/profile/978076-kynoox_/)",
+        "__TRANSLATION_CREDIT__": "%1 by %2",
+
+        "label_offering": "Oferenda",
+        "label_silveroffering": "Oferenda com prato de prata",
+        "label_craving": "Oferenda Satisfaz",
+        "label_stations": "Estações de Cozinha",
+        "label_recipes": "Melhores Receitas",
+        "label_cook": "Cozinhado a primeira vez por",
+        "label_cook_unknown": "Alguém",
+        "label_cook_info": "Essa receita foi descoberta originalmente por ",
+        "label_cook_info_unknown": "Essa receita foi descoberta originalmente por alguém sem nome.",
+
+        "pot": "Panela",
+        "oven": "Forno",
+        "grill": "Grelha",
+
+        "all": "Todos",
+        "snack": "Lanche",
+        "bread": "Pão",
+        "veggie": "Vegetal",
+        "soup": "Sopa",
+        "fish": "Peixe",
+        "meat": "Carne",
+        "cheese": "Queija",
+        "pasta": "Massa",
+        "sweet": "Sobremesa",
+
+        "coin1": "Moeda Antiga",
+        "coin2": "Medalhão de Safira",
+        "coin3": "Marco Vermelho",
+        "coin4": "Favor do Gnaw",
+
+        "quagmire_foliage_cooked": "Folhagem",
+        "quagmire_onion_cooked": "Cebola",
+        "quagmire_carrot_cooked": "Cenoura",
+        "quagmire_mushrooms_cooked": "Cogumelo",
+        "quagmire_crabmeat_cooked": "Carne de Carangueijo",
+        "quagmire_potato_cooked": "Batata",
+        "quagmire_salmon_cooked": "Salmão",
+        "quagmire_cookedsmallmeat": "Pedaços de Carne",
+        "twigs": "Gravetos",
+        "quagmire_turnip_cooked": "Nabo",
+        "quagmire_sap": "Seiva",
+        "rocks": "Pedras",
+        "quagmire_goatmilk": "Leite de Cabra",
+        "quagmire_syrup": "Xarope",
+        "quagmire_flour": "Farinha",
+        "quagmire_garlic_cooked": "Garlic",
+        "berries_cooked": "Bagas",
+        "cookedmeat": "Carne",
+        "quagmire_tomato_cooked": "Tomate",
+        "quagmire_spotspice_ground": "Tempero",
     }
 }
 
@@ -314,10 +541,41 @@ function GorgeRecipebookLocalize() {
 function loc_set_language(language_key) {
     loc_selected_language = language_key;
 
+    // Update filter credit
+    if (has_loc_string("__FILTER_CREDIT__")) {
+        let filterCredit = loc_string("__FILTER_CREDIT__");
+        filterCredit = filterCredit.replace("%1", '<a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a>')
+            .replace("%2", '<a href="https://forums.kleientertainment.com/profile/988803-adai1198/">adai1198</a>');
+        $('.filter-credits').html(filterCredit);
+    }
+
+    // Update translation credit
+    if (has_loc_string("__TRANSLATION_AUTHOR__")) {
+        let authors = loc_string("__TRANSLATION_AUTHOR__");
+        let authorList = authors.split(',');
+        let authorHtml = "";
+        for (let i in authorList) {
+            let author = authorList[i];
+            let [_, name, link] = /([^\(]+)\(([^\)]+)\)/.exec(author);
+            authorHtml += `${i != 0 ? ", ":""}<a href="${link}">${name}</a>`;
+        }
+        let translationCredit = loc_string("__TRANSLATION_CREDIT__")
+            .replace("%1", loc_selected_language).replace("%2", authorHtml);
+        $('.translation-credits').html(translationCredit + "<br>");
+    }
+
+    // Update contribute
+    if (has_loc_string("__TRANSLATION_AUTHOR__"))
+        $('.contribute').html(loc_string("__CONTRIBUTE__")
+            .replace('git', '<a href="https://github.com/kleientertainment/TheGorgeRecipeBook">git</a>') + "<br>");
+
     // Update cravings
     var craving_elems = $('.btn_cat_div label.button');
     for (var i = 0; i < craving_elems.length; i++) {
         $(craving_elems[i]).text(loc_string($(craving_elems[i]).attr('for')));
+    }
+    for (let key in craving_names) {
+        craving_names[key] = loc_string(key);
     }
 
     // Update stations
@@ -325,6 +583,28 @@ function loc_set_language(language_key) {
     for (var i = 0; i < station_elems.length; i++) {
         $(station_elems[i]).text(loc_string($(station_elems[i]).attr('for')));
     }
+    for (let key in cooking_station_names) {
+        cooking_station_names[key] = loc_string(key);
+    }
+
+    // Update dishname
+    for (let i = 1; i < 71; ++i) {
+        discovered_dishes[i].name = loc_string("dish" + i);
+    }
+
+    // Update Info
+    $('.dish-tribute > label:first').text(loc_string('label_offering'));
+    $('.dish-plate > label:first').text(loc_string('label_silveroffering'));
+    $('.dish-craving > label:first').text(loc_string('label_craving'));
+    $('.dish-station > label:first').text(loc_string('label_stations'));
+    $('.dish-recipes > label:first').text(loc_string('label_recipes'));
+    $('.dish-finder > label:first').text(loc_string('label_cook'));
+
+    // Update Dish title
+    $('.recipelist-dishes > li').each((_, e) => {
+        let index = Number.parseInt($(e).data('index'));
+        $(e).attr('title', discovered_dishes[index].name);
+    })
 
     // Set a cookie
     loc_set_cookie("language", loc_selected_language, 6);
@@ -351,6 +631,10 @@ function loc_get_cookie(cname) {
         }
     }
     return "";
+}
+
+function has_loc_string(key) {
+    return key in loc_strings[loc_selected_language];
 }
 
 function loc_string(key) {
