@@ -152,7 +152,7 @@ var loc_strings = {
         "pasta": "意大利面(Pasta)",
         "sweet": "甜品(Dessert)"
     },
-    "Russian": {
+    "Русский": {
         "label_offering":"Подношение",
         "label_silveroffering":"Сервированое Подношение",
         "label_craving":"Удовлетворяет Желание",
