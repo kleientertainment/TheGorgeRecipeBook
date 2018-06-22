@@ -62,7 +62,7 @@ $(document).ready(function () {
 function GetDishes() {
     $.ajax({
         type: 'GET',
-        url: "https://thegorge.kleientertainment.com/items",
+        url: "https://s3.amazonaws.com/kleiforums/GORGE/RecipeBook/recipedata.json",
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         async: true,
