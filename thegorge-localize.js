@@ -176,7 +176,7 @@ var loc_strings = {
         "cookedmeat": "大肉",
         "quagmire_tomato_cooked": "番茄根",
         "quagmire_spotspice_ground": "斑点香料",
-        
+
         "dish1": "麵包",
         "dish2": "薯片",
         "dish3": "蔬菜湯",
@@ -265,7 +265,7 @@ var loc_strings = {
         "pot": "烹饪锅",
         "oven": "烤炉",
         "grill": "烤架",
-        
+
         "all": "全部",
         "snack": "小吃",
         "bread": "面包",
@@ -277,12 +277,12 @@ var loc_strings = {
         "pasta": "面条",
         "sweet": "甜食",
         "none": "无",
-        
+
         "coin1": "古老硬币",
         "coin2": "蓝宝石徽章",
         "coin3": "红色印记",
         "coin4": "噬咬的好感",
-        
+
         "quagmire_foliage_cooked": "蕨叶",
         "quagmire_onion_cooked": "洋葱",
         "quagmire_carrot_cooked": "胡萝卜",
@@ -400,7 +400,7 @@ var loc_strings = {
         "cheese": "Сыр",
         "pasta": "Макароны",
         "sweet": "Десерт",
-		"none": "Пусто",
+        "none": "Пусто",
 
         "coin1": "Старая монета",
         "coin2": "Сапфировый медальон",
