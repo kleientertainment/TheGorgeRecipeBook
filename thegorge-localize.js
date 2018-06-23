@@ -151,7 +151,6 @@ var loc_strings = {
         "pasta": "義大利麵(Pasta)",
         "sweet": "甜品(Dessert)",
         "none": "無",
-        ---↓ These should be Simplified Chinese, not Traditional Chinese.
         "coin1": "古老硬币",
         "coin2": "蓝宝石徽章",
         "coin3": "红色印记",
@@ -177,7 +176,7 @@ var loc_strings = {
         "cookedmeat": "大肉",
         "quagmire_tomato_cooked": "番茄根",
         "quagmire_spotspice_ground": "斑点香料",
-        ---↑ These should be Simplified Chinese, not Traditional Chinese.
+        
         "dish1": "麵包",
         "dish2": "薯片",
         "dish3": "蔬菜湯",
