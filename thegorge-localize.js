@@ -524,7 +524,7 @@ var loc_strings = {
         "soup": "Sopa",
         "fish": "Peixe",
         "meat": "Carne",
-        "cheese": "Queija",
+        "cheese": "Queijo",
         "pasta": "Massa",
         "sweet": "Sobremesa",
 
