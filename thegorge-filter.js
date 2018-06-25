@@ -150,9 +150,8 @@ function main(options) {
             // normal dish
             let needHighlight = (
                     (discovered_dishes[id].cravings != null && (currentCategory == 'all' || discovered_dishes[id].cravings.indexOf(currentCategory) != -1))
-                    // this is not a bug because all dishes has only one station
                     &&
-                    (currentStationAll || currentStationStatus[discovered_dishes[id].station[0]]))
+                    (currentStationAll || discovered_dishes[id].station.some(dishStations => currentStationStatus[dishStations])))
                 // dish 70
                 ||
                 (discovered_dishes[id].cravings == null && currentStationAll && currentCategory == 'all');
