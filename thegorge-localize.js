@@ -499,7 +499,7 @@ var loc_strings = {
         "dish69": "Чизкейк",
         "dish70": "Сироп"
     },
-    "Português": {
+    "Português (Br)": {
         "label_offering": "Oferenda",
         "label_silveroffering": "Oferenda em Prato de Prata",
         "label_craving": "Oferendas Satisfeitas",
@@ -585,7 +585,7 @@ var loc_strings = {
         "dish32": "Cozido de Carne",
         "dish33": "Hambúrguer",
         "dish34": "Hambúrguer de Peixe",
-        "dish35": "Hambúrger de Cogumelo",
+        "dish35": "Hambúrguer de Cogumelo",
         "dish36": "Filé de Peixe",
         "dish37": "Curry",
         "dish38": "Espaguete com Almôndegas",
