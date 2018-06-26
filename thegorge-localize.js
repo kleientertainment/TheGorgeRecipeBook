@@ -561,7 +561,7 @@ var loc_strings = {
         
         "label_offering": "ของรางวัล",
         "label_silveroffering": "ของรางวัล จานเงิน",
-        "label_craving": "เหรียญเงิน",
+        "label_craving": "สนองความอยาก",
         "label_stations": "ที่ทำอาหาร",
         "label_recipes": "สูตรอาหาร ยอดฮิต",
         "label_cook": "ทำครั้งแรก โดย",
