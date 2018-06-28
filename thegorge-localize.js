@@ -92,7 +92,7 @@ var loc_strings = {
         "dish39": "Lasagna",
         "dish40": "Poached Fish",
         "dish41": "Shepherds Pie",
-        "dish42": "Shepherds Pie",
+        "dish42": "Candy",
         "dish43": "Pudding",
         "dish44": "Waffles",
         "dish45": "Berry Tart",
