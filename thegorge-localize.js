@@ -898,7 +898,7 @@ var loc_strings = {
         "meat": "Thịt",
         "cheese": "Mát",
         "pasta": "Pasta",
-        "sweet": "Tráng Miệng"
+        "sweet": "Tráng Miệng",
 
         "coin1": "Xu Cổ",
         "coin2": "Huy Chương Sapphire",
@@ -926,7 +926,7 @@ var loc_strings = {
         "quagmire_tomato_cooked": "Cà Chua Nướng",
         "quagmire_spotspice_ground": "Gia vị",
         
-        //Some dishes doesn't have alternative name in Vietnamese
+        //Some dishes don't have corresponding names in Vietnamese
         
         "dish1": "Bánh Mì",
         "dish2": "Khoai Tây Chiên",
@@ -939,7 +939,7 @@ var loc_strings = {
         "dish9": "Cá Viên Xiên",
         "dish10": "Thịt Viên",
         "dish11": "Thịt Xiên",
-        "dish12": "Mầm Đá",     //This dish's name based on an old joke story, who actually coocked a stone for the King.
+        "dish12": "Mầm Đá", // This dish's name is based on an old joke story, about someone who actually cooked a stone for the King
         "dish13": "Bánh Croquette",
         "dish14": "Rau Củ Nướng",
         "dish15": "Bánh Thịt Xay",
