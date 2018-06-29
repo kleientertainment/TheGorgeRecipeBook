@@ -874,16 +874,16 @@ var loc_strings = {
     "Tiếng Việt": {
         "__TRANSLATION_AUTHOR__": "BoiRoiVL(https://forums.kleientertainment.com/profile/902088-trantuanlinh/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
-        
-        "label_offering":"Lễ Vật",
-        "label_silveroffering":"Lễ Vật Kèm Đĩa Bạc",
-        "label_craving":"Đáp Ứng Yêu Cầu",
-        "label_stations":"Đồ Nấu",
-        "label_recipes":"Công Thức Hay Nhất ",
-        "label_cook":"Được Nấu Đầu Tiên Bởi ",
-        "label_cook_unknown":"Một ai đó",
-        "label_cook_info":"Công thức được kháp phá đầu tiên bởi %1",
-        "label_cook_info_unknown":"Công thức được kháp phá đầu tiên bởi một người vô danh.",
+
+        "label_offering": "Lễ Vật",
+        "label_silveroffering": "Lễ Vật Kèm Đĩa Bạc",
+        "label_craving": "Đáp Ứng Yêu Cầu",
+        "label_stations": "Đồ Nấu",
+        "label_recipes": "Công Thức Hay Nhất ",
+        "label_cook": "Được Nấu Đầu Tiên Bởi ",
+        "label_cook_unknown": "Một ai đó",
+        "label_cook_info": "Công thức được kháp phá đầu tiên bởi %1",
+        "label_cook_info_unknown": "Công thức được kháp phá đầu tiên bởi một người vô danh.",
 
         "pot": "Nồi Hầm",
         "oven": "Lò Nướng",
@@ -903,7 +903,7 @@ var loc_strings = {
         "coin1": "Xu Cổ",
         "coin2": "Huy Chương Sapphire",
         "coin3": "Huyết Ấn",
-        "coin4": "Đặc Ân của Gnaw",                  
+        "coin4": "Đặc Ân của Gnaw",
 
         "quagmire_foliage_cooked": "Lá Tím",
         "quagmire_onion_cooked": "Hành",
@@ -925,9 +925,9 @@ var loc_strings = {
         "cookedmeat": "Thịt",
         "quagmire_tomato_cooked": "Cà Chua Nướng",
         "quagmire_spotspice_ground": "Gia vị",
-        
+
         //Some dishes don't have corresponding names in Vietnamese
-        
+
         "dish1": "Bánh Mì",
         "dish2": "Khoai Tây Chiên",
         "dish3": "Súp Rau Củ",
@@ -999,10 +999,10 @@ var loc_strings = {
         "dish69": "Bánh Phomát",
         "dish70": "Sirô"
     },
-    "ไทย" : {
+    "ไทย": {
         "__TRANSLATION_AUTHOR__": "WaDaShark(https://forums.kleientertainment.com/profile/1127762-wadashark/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
-        
+
         "label_offering": "ของรางวัล",
         "label_silveroffering": "ของรางวัล จานเงิน",
         "label_craving": "สนองความอยาก",
@@ -1125,8 +1125,8 @@ var loc_strings = {
         "dish69": "ชีสเค้ก",
         "dish70": "ไซรัป"
     },
-    "한국어" : {
-       "label_offering": "제공",
+    "한국어": {
+        "label_offering": "제공",
         "label_silveroffering": "은접시 제공",
         "label_craving": "만족하는 갈망",
         "label_stations": "요리 장소",
@@ -1249,9 +1249,9 @@ var loc_strings = {
         "dish70": "퀘그마이어 당밀"
     },
     "Polski": {
-        "__TRANSLATION_AUTHOR__":"Thalkas(https://forums.kleientertainment.com/profile/408118-thalkas) and Matek678(https://forums.kleientertainment.com/profile/247694-matek678/)",
+        "__TRANSLATION_AUTHOR__": "Thalkas(https://forums.kleientertainment.com/profile/408118-thalkas) and Matek678(https://forums.kleientertainment.com/profile/247694-matek678/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
-    
+
         "label_offering": "Podarunek",
         "label_silveroffering": "Podarunek ze srebrną zastawą",
         "label_craving": "Rodzaj potrawy",
