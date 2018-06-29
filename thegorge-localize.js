@@ -1247,6 +1247,132 @@ var loc_strings = {
         "dish68": "트라이플",
         "dish69": "치즈 케이크",
         "dish70": "퀘그마이어 당밀"
+    },
+    "Polski": {
+        "__TRANSLATION_AUTHOR__":"Thalkas(https://forums.kleientertainment.com/profile/408118-thalkas) and Matek678(https://forums.kleientertainment.com/profile/247694-matek678/)",
+        "__TRANSLATION_CREDIT__": "%1 by %2",
+    
+        "label_offering": "Podarunek",
+        "label_silveroffering": "Podarunek ze srebrną zastawą",
+        "label_craving": "Rodzaj potrawy",
+        "label_stations": "Stacja gotowania",
+        "label_recipes": "Najlepsze przepisy",
+        "label_cook": "Odkryty przez",
+        "label_cook_unknown": "Ktoś",
+        "label_cook_info": "Ten przepis został po raz pierwszy przyrządzony przez %1",
+        "label_cook_info_unknown": "Ten przepis został po raz pierwszy przyrządzony przez bezimiennego.",
+
+        "pot": "Garnek",
+        "oven": "Piec",
+        "grill": "Grill",
+
+        "all": "Wszystko",
+        "snack": "Przekąska",
+        "bread": "Chleb",
+        "veggie": "Warzywa",
+        "soup": "Zupa",
+        "fish": "Ryba",
+        "meat": "Mięso",
+        "cheese": "Ser",
+        "pasta": "Makaron",
+        "sweet": "Deser",
+
+        "coin1": "Stara moneta",
+        "coin2": "Szafirowy medalion",
+        "coin3": "Miedziany szeląg",
+        "coin4": "Fawor Gnaw'a",
+
+        "quagmire_foliage_cooked": "Listowie",
+        "quagmire_onion_cooked": "Cebula",
+        "quagmire_carrot_cooked": "Marchewka",
+        "quagmire_mushrooms_cooked": "Grzyby",
+        "quagmire_crabmeat_cooked": "Mięso Kraba",
+        "quagmire_potato_cooked": "Ziemniak",
+        "quagmire_salmon_cooked": "Łosoś",
+        "quagmire_cookedsmallmeat": "Kawałek Mięsa",
+        "twigs": "Patyki",
+        "quagmire_turnip_cooked": "Rzepa",
+        "quagmire_sap": "Sok Roślinny",
+        "rocks": "Kamienie",
+        "quagmire_goatmilk": "Kozie Mleko",
+        "quagmire_syrup": "Syrop",
+        "quagmire_flour": "Mąka",
+        "quagmire_garlic_cooked": "Czosnek",
+        "berries_cooked": "Jagody",
+        "cookedmeat": "Mięso",
+        "quagmire_tomato_cooked": "Pomidor",
+        "quagmire_spotspice_ground": "Ostra Przyprawa",
+
+        "dish1": "Chleb",
+        "dish2": "Czipsy",
+        "dish3": "Zupa jarzynowa",
+        "dish4": "Kanapka z dżemem",
+        "dish5": "Potrawka z ryby",
+        "dish6": "Ciasto z rzepy",
+        "dish7": "Placki ziemniaczane",
+        "dish8": "Zupa ziemniaczana",
+        "dish9": "Szaszłyk z rybnych pulpetów",
+        "dish10": "Pulpety",
+        "dish11": "Szaszłyki z mięsa",
+        "dish12": "Zupa z kamienia",
+        "dish13": "Krokiety",
+        "dish14": "Pieczone warzywa",
+        "dish15": "Bochenek mięsa",
+        "dish16": "Zupa marchewkowa",
+        "dish17": "Ciasto z ryby",
+        "dish18": "Ryba z frytkami",
+        "dish19": "Ciasto z mięsem",
+        "dish20": "Mini burgery",
+        "dish21": "Dżem",
+        "dish22": "Rolada z Dżemem",
+        "dish23": "Ciasto marchewkowe",
+        "dish24": "Purée z ziemniaków",
+        "dish25": "Chleb czosnkowy",
+        "dish26": "Pomidorówka",
+        "dish27": "Kiełbaski",
+        "dish28": "Kandyzowana ryba",
+        "dish29": "Faszerowane grzyby",
+        "dish30": "Ratatuj",
+        "dish31": "Bruschetta",
+        "dish32": "Potrawka z mięsa",
+        "dish33": "Hamburger",
+        "dish34": "Ryburger",
+        "dish35": "Grzyburger",
+        "dish36": "Stek z ryby",
+        "dish37": "Curry",
+        "dish38": "Spaghetti z klopsami",
+        "dish39": "Lazania",
+        "dish40": "Duszona ryba",
+        "dish41": "Zapiekanka pasterska",
+        "dish42": "Cukierki",
+        "dish43": "Pudding",
+        "dish44": "Gofry",
+        "dish45": "Tarta owocowa",
+        "dish46": "Makaron z serem",
+        "dish47": "Bajgel z rybą",
+        "dish48": "Tost serowy",
+        "dish49": "Zupa grzybowa",
+        "dish50": "Pierogi",
+        "dish51": "Manicotti",
+        "dish52": "Cheeseburger",
+        "dish53": "Fettuccine",
+        "dish54": "Zupa cebulowa",
+        "dish55": "Kotlet",
+        "dish56": "Kremowa ryba",
+        "dish57": "Pizza",
+        "dish58": "Duszona wołowina",
+        "dish59": "Ciasto krabowe",
+        "dish60": "Stek z frytkami",
+        "dish61": "Kanapka łowiecka",
+        "dish62": "Mięso w boczku",
+        "dish63": "Kanapka z pastą krabową",
+        "dish64": "Polędwica w cieście",
+        "dish65": "Krabowe Ravioli",
+        "dish66": "Kostka karmelu",
+        "dish67": "Scone",
+        "dish68": "Trifle",
+        "dish69": "Sernik",
+        "dish70": "Syrop z Quagmire"
     }
 }
 
@@ -1286,34 +1412,6 @@ function GorgeRecipebookLocalize() {
 
 function loc_set_language(language_key) {
     loc_selected_language = language_key;
-
-    // Update filter credit
-    if (has_loc_string("__FILTER_CREDIT__")) {
-        let filterCredit = loc_string("__FILTER_CREDIT__");
-        filterCredit = filterCredit.replace("%1", '<a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a>')
-            .replace("%2", '<a href="https://forums.kleientertainment.com/profile/988803-adai1198/">adai1198</a>');
-        $('.filter-credits').html(filterCredit);
-    }
-
-    // Update translation credit
-    if (has_loc_string("__TRANSLATION_AUTHOR__")) {
-        let authors = loc_string("__TRANSLATION_AUTHOR__");
-        let authorList = authors.split(',');
-        let authorHtml = "";
-        for (let i in authorList) {
-            let author = authorList[i];
-            let [_, name, link] = /([^\(]+)\(([^\)]+)\)/.exec(author);
-            authorHtml += `${i != 0 ? ", ":""}<a href="${link}">${name}</a>`;
-        }
-        let translationCredit = loc_string("__TRANSLATION_CREDIT__")
-            .replace("%1", loc_selected_language).replace("%2", authorHtml);
-        $('.translation-credits').html(translationCredit + "<br>");
-    }
-
-    // Update contribute
-    if (has_loc_string("__TRANSLATION_AUTHOR__"))
-        $('.contribute').html(loc_string("__CONTRIBUTE__")
-            .replace('git', '<a href="https://github.com/kleientertainment/TheGorgeRecipeBook">git</a>') + "<br>");
 
     // Update craving buttons
     var craving_elems = $('.btn_cat_div label.button');
