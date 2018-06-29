@@ -1125,7 +1125,7 @@ var loc_strings = {
         "dish69": "ชีสเค้ก",
         "dish70": "ไซรัป"
     },
-    "Korean" : {
+    "한국어" : {
        "label_offering": "제공",
         "label_silveroffering": "은접시 제공",
         "label_craving": "만족하는 갈망",
