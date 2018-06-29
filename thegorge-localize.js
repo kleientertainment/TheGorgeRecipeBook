@@ -1126,7 +1126,7 @@ var loc_strings = {
         "dish70": "ไซรัป"
     },
     "Polski": {
-        "__TRANSLATION_AUTHOR__": "Thalkas(https://forums.kleientertainment.com/profile/408118-thalkas) and Matek678(https://forums.kleientertainment.com/profile/247694-matek678/)"
+        "__TRANSLATION_AUTHOR__":"Thalkas(https://forums.kleientertainment.com/profile/408118-thalkas) and Matek678(https://forums.kleientertainment.com/profile/247694-matek678/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
     
         "label_offering": "Podarunek",
@@ -1163,22 +1163,22 @@ var loc_strings = {
         "quagmire_onion_cooked": "Cebula",
         "quagmire_carrot_cooked": "Marchewka",
         "quagmire_mushrooms_cooked": "Grzyby",
-        "quagmire_crabmeat_cooked": "Mięso kamiennego kraba",
+        "quagmire_crabmeat_cooked": "Mięso Kraba",
         "quagmire_potato_cooked": "Ziemniak",
         "quagmire_salmon_cooked": "Łosoś",
-        "quagmire_cookedsmallmeat": "Kawałek mięsa",
+        "quagmire_cookedsmallmeat": "Kawałek Mięsa",
         "twigs": "Patyki",
         "quagmire_turnip_cooked": "Rzepa",
-        "quagmire_sap": "Sok drzewny",
+        "quagmire_sap": "Sok Roślinny",
         "rocks": "Kamienie",
-        "quagmire_goatmilk": "Mleko kozie",
+        "quagmire_goatmilk": "Kozie Mleko",
         "quagmire_syrup": "Syrop",
         "quagmire_flour": "Mąka",
         "quagmire_garlic_cooked": "Czosnek",
         "berries_cooked": "Jagody",
         "cookedmeat": "Mięso",
         "quagmire_tomato_cooked": "Pomidor",
-        "quagmire_spotspice_ground": "Plamista przyprawa",
+        "quagmire_spotspice_ground": "Ostra Przyprawa",
 
         "dish1": "Chleb",
         "dish2": "Czipsy",
@@ -1201,7 +1201,7 @@ var loc_strings = {
         "dish19": "Ciasto z mięsem",
         "dish20": "Mini burgery",
         "dish21": "Dżem",
-        "dish22": "Rolada",
+        "dish22": "Rolada z Dżemem",
         "dish23": "Ciasto marchewkowe",
         "dish24": "Purée z ziemniaków",
         "dish25": "Chleb czosnkowy",
@@ -1243,13 +1243,13 @@ var loc_strings = {
         "dish61": "Kanapka łowiecka",
         "dish62": "Mięso w boczku",
         "dish63": "Kanapka z pastą krabową",
-        "dish64": "Beef Wellington",
-        "dish65": "Ravioli z kraba",
+        "dish64": "Polędwica w cieście",
+        "dish65": "Krabowe Ravioli",
         "dish66": "Kostka karmelu",
         "dish67": "Scone",
         "dish68": "Trifle",
         "dish69": "Sernik",
-        "dish70": "Syrop"
+        "dish70": "Syrop z Quagmire"
     }
 }
 
@@ -1289,34 +1289,6 @@ function GorgeRecipebookLocalize() {
 
 function loc_set_language(language_key) {
     loc_selected_language = language_key;
-
-    // Update filter credit
-    if (has_loc_string("__FILTER_CREDIT__")) {
-        let filterCredit = loc_string("__FILTER_CREDIT__");
-        filterCredit = filterCredit.replace("%1", '<a href="https://forums.kleientertainment.com/profile/1125024-cheewind/">cheewind</a>')
-            .replace("%2", '<a href="https://forums.kleientertainment.com/profile/988803-adai1198/">adai1198</a>');
-        $('.filter-credits').html(filterCredit);
-    }
-
-    // Update translation credit
-    if (has_loc_string("__TRANSLATION_AUTHOR__")) {
-        let authors = loc_string("__TRANSLATION_AUTHOR__");
-        let authorList = authors.split(',');
-        let authorHtml = "";
-        for (let i in authorList) {
-            let author = authorList[i];
-            let [_, name, link] = /([^\(]+)\(([^\)]+)\)/.exec(author);
-            authorHtml += `${i != 0 ? ", ":""}<a href="${link}">${name}</a>`;
-        }
-        let translationCredit = loc_string("__TRANSLATION_CREDIT__")
-            .replace("%1", loc_selected_language).replace("%2", authorHtml);
-        $('.translation-credits').html(translationCredit + "<br>");
-    }
-
-    // Update contribute
-    if (has_loc_string("__TRANSLATION_AUTHOR__"))
-        $('.contribute').html(loc_string("__CONTRIBUTE__")
-            .replace('git', '<a href="https://github.com/kleientertainment/TheGorgeRecipeBook">git</a>') + "<br>");
 
     // Update craving buttons
     var craving_elems = $('.btn_cat_div label.button');
