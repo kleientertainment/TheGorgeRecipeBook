@@ -151,7 +151,7 @@ var loc_strings = {
         "pasta": "義大利麵(Pasta)",
         "sweet": "甜品(Dessert)",
         "none": "無",
-        
+
         "coin1": "古幣",
         "coin2": "寶藍獎章",
         "coin3": "紅色標誌",
@@ -1375,21 +1375,21 @@ var loc_strings = {
         "dish69": "Sernik",
         "dish70": "Syrop"
     },
-	"Deutsch": {
-		"__TRANSLATION_AUTHOR__": "Mueck(https://forums.kleientertainment.com/profile/541898-mueck/)",
+    "Deutsch": {
+        "__TRANSLATION_AUTHOR__": "Mueck(https://forums.kleientertainment.com/profile/541898-mueck/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
 
-		"label_offering": "Opfergabe",
-		"label_silveroffering": "Opfergabe auf Silberware",
-		"label_craving": "Sättigt Verlangen nach",
-		"label_stations": "Zubereitung",
+        "label_offering": "Opfergabe",
+        "label_silveroffering": "Opfergabe auf Silberware",
+        "label_craving": "Sättigt Verlangen nach",
+        "label_stations": "Zubereitung",
         "label_recipes": "Häufigste Rezepte",
         "label_cook": "Zuerst gekocht von",
         "label_cook_unknown": "Jemandem",
         "label_cook_info": "Dieses Gericht wurde ursprünglich entdeckt von %1",
         "label_cook_info_unknown": "Dieses Gericht wurde ursprünglich entdeckt von einem namenlosen Unbekannten.",
 
-		"pot": "Kochtopf",
+        "pot": "Kochtopf",
         "oven": "Ofen",
         "grill": "Grill",
 
@@ -1499,7 +1499,7 @@ var loc_strings = {
         "dish67": "Scone",
         "dish68": "Trifle",
         "dish69": "Käsekuchen",
-		"dish70": "Sirup"
+        "dish70": "Sirup"
     }
 }
 
