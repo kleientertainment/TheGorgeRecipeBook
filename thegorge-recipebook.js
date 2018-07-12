@@ -360,4 +360,7 @@ function SelectDish(dish_elem) {
         $(".recipedetails .dish-finder .value").text("");
 
     }
+    
+    // Add emoji to the usernames
+    if (typeof DSTEmojiFilter === "function") DSTEmojiFilter(".dish-finder .value span");
 }
