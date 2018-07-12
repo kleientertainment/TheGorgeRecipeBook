@@ -1501,10 +1501,10 @@ var loc_strings = {
         "dish69": "Käsekuchen",
         "dish70": "Sirup"
     },
-        "Swedish": {
+    "Swedish": {
         "__TRANSLATION_AUTHOR__": "Captain Rage(https://forums.kleientertainment.com/profile/912865-captain_rage/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
-            
+
         "label_offering": "Bjudning",
         "label_silveroffering": "Bjudning på silverfat",
         "label_craving": "Tillfredsställer begär",
@@ -1626,11 +1626,11 @@ var loc_strings = {
         "dish68": "Trifle",
         "dish69": "Amerikansk ostkaka",
         "dish70": "Sockerlag"
- },
-"Magyar": {
+    },
+    "Magyar": {
         "__TRANSLATION_AUTHOR__": "Don Quijote(https://forums.kleientertainment.com/profile/1133239-don-quijote/)",
         "__TRANSLATION_CREDIT__": "%1 by %2",
-        
+
         "label_offering": "Jutalom",
         "label_silveroffering": "Jutalom ezüst tálcával",
         "label_craving": "Kielégíti a vágyat",
@@ -1727,7 +1727,7 @@ var loc_strings = {
         "dish43": "Kenyérpuding",
         "dish44": "Gofri",
         "dish45": "Gyümölcskosár",
-        "dish46": "Sajtos makaróni,"
+        "dish46": "Sajtos makaróni",
         "dish47": "Bagel és hal",
         "dish48": "Grillezett sajt",
         "dish49": "Tejszínes gombaleves",
