@@ -749,7 +749,7 @@ var loc_strings = {
         "dish69": "Čizkejk",
         "dish70": "Močvarni sirup"
     },
-    "Turkiah": {
+    "Türkçe": {
         "label_offering": "Sunma",
         "label_silveroffering": "Gümüş Tabakta Sunma",
         "label_craving": "İsteği Karşılar",
@@ -868,7 +868,7 @@ var loc_strings = {
         "dish65": "Yengeç Ravioli",
         "dish66": "Karamel Küp",
         "dish67": "Çörek",
-        "dish68": "pandispanyalı Tatlı",
+        "dish68": "Pandispanyalı Tatlı",
         "dish69": "Cheesecake",
         "dish70": "Bataklık Şerbeti"
     },
